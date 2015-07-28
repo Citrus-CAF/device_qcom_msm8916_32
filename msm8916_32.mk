@@ -43,7 +43,9 @@ endif
            oem-services \
            qcom.fmradio \
            org.codeaurora.Performance \
-           tcmiface
+
+PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += com.qti.dpmframework
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
