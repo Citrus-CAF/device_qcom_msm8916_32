@@ -41,7 +41,11 @@ PRODUCT_BOOT_JARS += \
            qcom.fmradio
 
 PRODUCT_BOOT_JARS += tcmiface
+
+ifneq ($(strip $(QCPATH)),)
 PRODUCT_BOOT_JARS += com.qti.dpmframework
+PRODUCT_BOOT_JARS += dpmapi
+endif
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
