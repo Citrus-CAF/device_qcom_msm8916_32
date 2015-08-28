@@ -48,6 +48,8 @@ PRODUCT_BOOT_JARS += com.qti.dpmframework
 PRODUCT_BOOT_JARS += dpmapi
 endif
 
+PRODUCT_BOOT_JARS += WfdCommon
+
 # Audio configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_32/audio_policy.conf:system/etc/audio_policy.conf \
