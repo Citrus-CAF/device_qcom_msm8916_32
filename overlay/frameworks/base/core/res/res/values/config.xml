@@ -53,6 +53,8 @@
 <!--   <item>    </item> Minimum number of cores online resource -->
        <item>0x1C00</item> <!-- KSMBOOST resource -->
    </integer-array>
+   <!-- Whether packing disable is enabled.  -->
+   <bool name="config_disablePacking">true</bool>
    <integer name="disablepacking_timeout_param">5000</integer>
    <integer-array name="launchboost_packing_param_value">
        <item>0x3E01</item> <!-- SCHED_PREFER_IDLE resource -->
