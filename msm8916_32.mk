@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_32/overlay
+#DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_32/overlay
 
 TARGET_USES_QCOM_BSP := true
 ifeq ($(TARGET_PRODUCT),msm8916_32)
@@ -7,7 +7,7 @@ TARGET_USES_NQ_NFC := false
 endif
 
 # Add QC Video Enhancements flag
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+#TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
@@ -39,20 +39,20 @@ ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
 endif
 endif
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
            qcom.fmradio
 
-PRODUCT_BOOT_JARS += tcmiface
-PRODUCT_BOOT_JARS += qcmediaplayer
+#PRODUCT_BOOT_JARS += tcmiface
+#PRODUCT_BOOT_JARS += qcmediaplayer
 
 ifneq ($(strip $(QCPATH)),)
-PRODUCT_BOOT_JARS += com.qti.dpmframework
-PRODUCT_BOOT_JARS += dpmapi
-PRODUCT_BOOT_JARS += com.qti.location.sdk
-PRODUCT_BOOT_JARS += oem-services
+#PRODUCT_BOOT_JARS += com.qti.dpmframework
+#PRODUCT_BOOT_JARS += dpmapi
+#PRODUCT_BOOT_JARS += com.qti.location.sdk
+#PRODUCT_BOOT_JARS += oem-services
 endif
 
-PRODUCT_BOOT_JARS += WfdCommon
+#PRODUCT_BOOT_JARS += WfdCommon
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
