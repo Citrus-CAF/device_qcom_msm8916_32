@@ -7,7 +7,7 @@ TARGET_USES_NQ_NFC := false
 endif
 
 # Add QC Video Enhancements flag
-#TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
