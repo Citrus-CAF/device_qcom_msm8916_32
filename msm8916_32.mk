@@ -8,6 +8,9 @@ endif
 # Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
+# Enable features in video HAL that can compile only on this platform
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
 
