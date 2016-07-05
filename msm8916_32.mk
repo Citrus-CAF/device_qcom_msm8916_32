@@ -59,7 +59,7 @@ ifneq ($(strip $(QCPATH)),)
 #PRODUCT_BOOT_JARS += oem-services
 endif
 
-#PRODUCT_BOOT_JARS += WfdCommon
+PRODUCT_BOOT_JARS += WfdCommon
 
 # Audio configuration file
 -include $(TOPDIR)hardware/qcom/audio/configs/msm8916_32/msm8916_32.mk
