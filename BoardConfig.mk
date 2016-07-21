@@ -122,6 +122,7 @@ TARGET_BOARD_SUFFIX := _32
 
 #Use dlmalloc instead of jemalloc for mallocs
 #MALLOC_IMPL := dlmalloc
+MALLOC_SVELTE := true
 
 #TARGET_LDPRELOAD := libNimsWrap.so
 
