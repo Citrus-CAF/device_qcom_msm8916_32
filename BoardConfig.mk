@@ -124,8 +124,6 @@ TARGET_BOARD_SUFFIX := _32
 #MALLOC_IMPL := dlmalloc
 MALLOC_SVELTE := true
 
-#TARGET_LDPRELOAD := libNimsWrap.so
-
 #Enable HW based full disk encryption
 #TARGET_HW_DISK_ENCRYPTION := true
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
