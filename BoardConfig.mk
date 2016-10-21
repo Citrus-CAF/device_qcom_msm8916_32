@@ -127,11 +127,11 @@ TARGET_BOARD_SUFFIX := _32
 MALLOC_SVELTE := true
 
 #Enable HW based full disk encryption
-#TARGET_HW_DISK_ENCRYPTION := true
+TARGET_HW_DISK_ENCRYPTION := true
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 #Enable SW based full disk encryption
-#TARGET_SWV8_DISK_ENCRYPTION := true
+TARGET_SWV8_DISK_ENCRYPTION := true
 
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
