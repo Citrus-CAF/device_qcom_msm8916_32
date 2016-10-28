@@ -102,6 +102,9 @@ PRODUCT_PACKAGES += libSubSystemShutdown
 
 PRODUCT_PACKAGES += wcnss_service
 
+#Android EGL implementation
+PRODUCT_PACKAGES += libGLES_android
+
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_32/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
