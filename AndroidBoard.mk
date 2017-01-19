@@ -33,6 +33,7 @@ endif
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
+ifneq ($(TARGET_DEVICE),wt88047)
 ifeq ($(KERNEL_DEFCONFIG),)
     ifeq ($(TARGET_BUILD_VARIANT),user)
       KERNEL_DEFCONFIG := msm8916-perf_defconfig
@@ -45,10 +46,12 @@ include kernel/AndroidKernel.mk
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
+endif 
 
 #----------------------------------------------------------------------
 # Copy additional target-specific files
 #----------------------------------------------------------------------
+ifneq ($(strip $(TARGET_USE_CM_RAMDISK)),true) 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := vold.fstab
 LOCAL_MODULE_TAGS  := optional eng
@@ -86,6 +89,7 @@ LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
+endif 
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := gpio-keys.kl
@@ -160,6 +164,7 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := hostapd.deny
 include $(BUILD_PREBUILT)
 
+ifneq ($(TARGET_DEVICE),wt88047)
 #Create symbolic links
 $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
         ln -sf /persist/WCNSS_qcom_wlan_nv.bin \
@@ -169,7 +174,7 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
         ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
         $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 endif
-
+endif
 #----------------------------------------------------------------------
 # Radio image
 #----------------------------------------------------------------------
