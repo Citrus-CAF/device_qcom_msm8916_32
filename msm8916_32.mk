@@ -28,10 +28,13 @@ PRODUCT_COPY_FILES += device/qcom/msm8916_32/media/media_profiles_8916.xml:syste
                       device/qcom/msm8916_32/media/media_codecs_8929.xml:system/etc/media_codecs_8929.xml
 endif
 
+ifneq ($(TARGET_DEVICE),wt88047)
 PRODUCT_PROPERTY_OVERRIDES += \
        dalvik.vm.heapgrowthlimit=128m \
        dalvik.vm.heapminfree=6m \
        dalvik.vm.heapstartsize=14m
+endif
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8916_32
@@ -109,11 +112,13 @@ PRODUCT_PACKAGES += libGLES_android
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_32/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
+ifneq ($(TARGET_DEVICE),wt88047)
 #wlan driver
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_32/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8916_32/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
     device/qcom/msm8916_32/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+endif
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
