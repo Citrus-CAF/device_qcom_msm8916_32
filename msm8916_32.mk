@@ -160,3 +160,7 @@ PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_32/sensors/hals.conf:system/etc/sensors/hals.conf
+
+#FEATURE_OPENGLES_EXTENSION_PACK support string config file
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
